@@ -12,10 +12,9 @@ $text-1: lighten($bg-0, 60%);
   --text-1: #{$text-1};
 
   --bg-0: #{$bg-0};
-  --bg-1: #{$bg-1};
+  --bg-1: rgba(255, 255, 255, 5%);
   --bg-2: #{$bg-2};
 
-  --border-color: var(--bg-2);
 
   --primary-color: #ef5350;
   --hover-color: white;
