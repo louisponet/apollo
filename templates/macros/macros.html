@@ -20,7 +20,21 @@
     <li class="list-item">
     <section>
         <div class="post-header">
+	        <div>
             <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
+        {% if page.taxonomies and page.taxonomies.tags %}
+            <div class="post-tags">
+                <nav class="nav tags">
+                    <ul class="tags">
+                        {% for tag in page.taxonomies.tags %}
+                            <li><a href={{ get_taxonomy_url(kind='tags', name=tag) | safe }}>{{ tag }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        {% endif %}
+	        </div>
+
 
             <div>
                 <h1 class="title">
